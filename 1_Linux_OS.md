@@ -1,6 +1,3 @@
-
----
-
 # 🖥️ Operating System
 
 An **Operating System (OS)** is software that manages and handles hardware and software resources of a computing device.
@@ -13,7 +10,7 @@ An **Operating System (OS)** is software that manages and handles hardware and s
 * Organizes system resources similar to different departments in a government
 * Examples: Linux, Unix, Windows 11, MS-DOS, Android, macOS, iOS
 
-![Operating System Diagram](1-.png)
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20251218155359448225/111.webp" width="500"  />
 
 ---
 
@@ -203,7 +200,7 @@ system programs, and application programs.
 
 Linux architecture defines how components interact to manage resources.
 
-![Linux Architecture](1-shell.png)
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20251101181027441852/applications.webp" width="500px">
 
 ---
 
@@ -289,7 +286,5 @@ Tools for system management and maintenance.
 * Cloud Computing
 * Embedded Systems
 * Personal Computing
-
-![Applications of Linux](1-image.png)
-
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20260502113238764453/linux_operating_system_uses.webp" width="500px">
 ---
