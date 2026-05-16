@@ -1,269 +1,289 @@
 # 🐧 Linux Commands 
 
-## 📂 File & Directory Management
+## Basic Navigation
 
-```bash id="cmd001"
-pwd        # Show current working directory
-ls         # List directory contents
-ls -l      # Detailed list with permissions
-ls -a      # Show hidden files
-cd         # Change directory
-cd ..      # Move to parent directory
-cd ~       # Go to home directory
-mkdir      # Create a new directory
-rmdir      # Remove empty directory
-tree       # Display directory structure as tree
-stat       # Show file/directory details
-basename   # Extract file name from path
-dirname    # Extract directory path
-realpath   # Show absolute file path
-```
+| Command            | Explanation                                        |
+| ------------------ | -------------------------------------------------- |
+| `pwd`              | Shows current working directory path               |
+| `ls`               | Lists files and directories                        |
+| `ls -a`            | Shows hidden files also                            |
+| `ls -la`           | Detailed list including hidden files               |
+| `ls -l`            | Detailed file listing                              |
+| `ls -laht`         | Long list sorted by time with human-readable sizes |
+| `ls -lahtr`        | Reverse time-sorted listing                        |
+| `ls -lahs`         | Shows file sizes in blocks                         |
+| `ls -lahr`         | Reverse order detailed listing                     |
+| `ls -c`            | Sorts files by change time                         |
+| `clear`            | Clears terminal screen                             |
+| `man command_name` | Opens manual/help page for a command               |
 
 ---
 
-## 📄 File Operations
+# APT Package Manager
 
-```bash id="cmd002"
-touch      # Create empty file
-cp         # Copy files/directories
-mv         # Move or rename files
-rm         # Delete files/directories
-unlink     # Remove a file
-cat        # Display file content
-tac        # Show file content in reverse
-less       # View file page by page
-more       # View file with forward navigation
-head       # Show first lines of file
-tail       # Show last lines of file
-nl         # Show file with line numbers
-wc         # Count words, lines, characters
-file       # Identify file type
-```
+| Command                         | Explanation                     |
+| ------------------------------- | ------------------------------- |
+| `sudo apt install package_name` | Installs a package              |
+| `sudo apt update`               | Updates package repository list |
+| `sudo apt upgrade`              | Upgrades installed packages     |
+
+## Difference Between `update` and `upgrade`
+
+| Command       | Working                             |
+| ------------- | ----------------------------------- |
+| `apt update`  | Refreshes package information       |
+| `apt upgrade` | Installs newer versions of packages |
 
 ---
 
-## 🔍 Search & Text Processing
+# Package Information
 
-```bash id="cmd003"
-grep       # Search text pattern in files
-egrep      # Extended grep (regex support)
-fgrep      # Fast grep (fixed strings)
-find       # Search files in directory
-locate     # Find files quickly using database
-which      # Show command path
-whereis    # Locate binary/source files
-awk        # Pattern scanning and processing
-sed        # Stream editor for text
-cut        # Extract columns from text
-sort       # Sort lines of text
-uniq       # Remove duplicate lines
-tr         # Translate characters
-diff       # Compare two files
-comm       # Compare sorted files line by line
-```
+| Command                 | Explanation                         |
+| ----------------------- | ----------------------------------- |
+| `apt list --installed`  | Shows installed packages            |
+| `apt list --upgradable` | Shows packages that can be upgraded |
 
 ---
 
-## 📦 Compression & Archiving
+# System Information
 
-```bash id="cmd004"
-tar        # Archive files
-gzip       # Compress files
-gunzip     # Decompress gzip files
-zip        # Create zip archive
-unzip      # Extract zip archive
-bzip2      # Compress using bzip2
-bunzip2    # Decompress bzip2
-xz         # Compress files with xz
-unxz       # Decompress xz files
-```
+| Command               | Explanation                 |
+| --------------------- | --------------------------- |
+| `cat /etc/os-release` | Displays OS details         |
+| `id`                  | Shows user and group IDs    |
+| `uname`               | Displays system/kernel info |
 
 ---
 
-## 👤 User Management
+# Important Paths
 
-```bash id="cmd005"
-whoami     # Show current user
-who        # Show logged-in users
-w          # Show user activity
-id         # Show user ID info
-useradd    # Add new user
-userdel    # Delete user
-usermod    # Modify user
-passwd     # Change password
-groupadd   # Create group
-groupdel   # Delete group
-groups     # Show user groups
-```
+| Path | Meaning        |
+| ---- | -------------- |
+| `~`  | Home directory |
+| `/`  | Root directory |
 
 ---
 
-## 🔐 Permissions
+# Directory Navigation
 
-```bash id="cmd006"
-chmod      # Change file permissions
-chown      # Change file owner
-chgrp      # Change group ownership
-umask      # Set default permissions
-```
-
----
-
-## ⚙️ Process Management
-
-```bash id="cmd007"
-ps         # Show running processes
-top        # Real-time process viewer
-htop       # Interactive process viewer
-kill       # Terminate process by PID
-killall    # Kill processes by name
-nice       # Set process priority
-renice     # Change priority of running process
-bg         # Resume job in background
-fg         # Bring job to foreground
-jobs       # Show active jobs
-```
+| Command | Explanation             |
+| ------- | ----------------------- |
+| `cd`    | Change directory        |
+| `cd ..` | Move one directory back |
+| `cd ~`  | Go to home directory    |
+| `cd /`  | Go to root directory    |
 
 ---
 
-## 💾 Disk & Storage
+# Directory & File Management
 
-```bash id="cmd008"
-df         # Show disk space usage
-du         # Show directory size
-mount      # Mount filesystem
-umount     # Unmount filesystem
-lsblk      # List block devices
-blkid      # Show device UUIDs
-fdisk      # Partition disk
-mkfs       # Create filesystem
-fsck       # Check filesystem errors
-```
+| Command         | Explanation                              |
+| --------------- | ---------------------------------------- |
+| `mkdir dirname` | Creates a directory                      |
+| `tree`          | Shows directory structure in tree format |
+| `stat`          | Displays file details                    |
+| `basename`      | Shows file name from path                |
 
 ---
 
-## 🌐 Networking
+# File Creation
 
-```bash id="cmd009"
-ping       # Test network connectivity
-ifconfig   # Show network config (old)
-ip         # Show/manage network interfaces
-ss         # Display socket info
-netstat    # Network statistics
-curl       # Transfer data from URL
-wget       # Download files from web
-hostname   # Show system hostname
-host       # DNS lookup
-dig        # Detailed DNS query
-```
+| Command                 | Explanation            |
+| ----------------------- | ---------------------- |
+| `touch file_name`       | Creates empty file     |
+| `touch file{1..10}.txt` | Creates multiple files |
+| `touch .file_name`      | Creates hidden file    |
 
 ---
 
-## 🖥️ System Information
+# Writing Content to Files
 
-```bash id="cmd010"
-uname      # Show system info
-uptime     # Show system uptime
-date       # Display current date/time
-cal        # Show calendar
-whoami     # Show current user
-hostnamectl # System hostname info
-arch       # Show architecture
-lscpu      # CPU info
-lsusb      # USB devices info
-lspci      # PCI devices info
-free       # Memory usage
-vmstat     # System performance stats
-```
+| Command                          | Explanation             |
+| -------------------------------- | ----------------------- |
+| `echo "Hello World" > file.txt`  | Writes content to file  |
+| `echo "Append text" >> file.txt` | Appends content to file |
 
 ---
 
-## 📦 Package Management (Debian/Ubuntu)
+# File Reading
 
-```bash id="cmd011"
-apt        # Package manager tool
-apt-get    # Advanced package tool
-apt-cache  # Query package cache
-apt update # Update package list
-apt upgrade # Upgrade packages
-apt install # Install package
-apt remove # Remove package
-apt autoremove # Remove unused packages
-dpkg       # Debian package manager
-dpkg -i    # Install .deb file
-```
-
----
-
-## 📜 File Permissions & Ownership
-
-```bash id="cmd012"
-getfacl    # Get file ACL permissions
-setfacl    # Set file ACL permissions
-```
+| Command               | Explanation                         |
+| --------------------- | ----------------------------------- |
+| `cat file.txt`        | Displays file content               |
+| `less file.txt`       | Reads file page by page             |
+| `more file.txt`       | Reads file page-wise                |
+| `head file.txt`       | Shows first 10 lines                |
+| `head -c 20 file.txt` | Shows first 20 characters           |
+| `tail file.txt`       | Shows last 10 lines                 |
+| `tail -c 20 file.txt` | Shows last 20 characters            |
+| `wc file.txt`         | Counts words, lines, and characters |
+| `file file.txt`       | Shows file type                     |
 
 ---
 
-## 🔄 Redirection & Pipes
+# Copy, Move, Rename & Delete
 
-```bash id="cmd013"
->          # Redirect output (overwrite)
->>         # Redirect output (append)
-<          # Input redirection
-|          # Pipe output to another command
-tee        # Output to file and screen
-xargs      # Convert input to arguments
-```
-
----
-
-## ⌨️ Shell & Environment
-
-```bash id="cmd014"
-echo       # Print text
-env        # Show environment variables
-export     # Set environment variable
-set        # Show/set shell variables
-unset      # Remove variable
-alias      # Create shortcut command
-unalias    # Remove alias
-source     # Run script in current shell
-history    # Show command history
-clear      # Clear terminal
-exit       # Exit shell
-```
+| Command                | Explanation                     |
+| ---------------------- | ------------------------------- |
+| `cp file newfile`      | Copies file                     |
+| `cp -r dir copied_dir` | Copies directory recursively    |
+| `mv oldfile newfile`   | Renames file                    |
+| `mv file1 /path/file2` | Moves file                      |
+| `rm file`              | Deletes file                    |
+| `rmdir dir`            | Removes empty directory         |
+| `rm -r dir`            | Deletes directory with contents |
 
 ---
 
-## 🧪 Advanced / Misc Commands
+# Disk Usage
 
-```bash id="cmd015"
-watch      # Run command repeatedly
-time       # Measure execution time
-yes        # Output text repeatedly
-sleep      # Pause execution
-shutdown   # Shutdown system
-reboot     # Restart system
-logout     # Log out user
-crontab    # Schedule tasks
-at         # Run command later
-wall       # Send message to all users
-write      # Send message to user
-script     # Record terminal session
-```
+| Command           | Explanation               |
+| ----------------- | ------------------------- |
+| `du file_name`    | Shows disk usage          |
+| `du -h file_name` | Human-readable disk usage |
 
 ---
 
-## 💡 Pro Tip
+# Text Editors
 
-```bash id="cmd016"
-man <command>   # Show manual of command
-```
-
-Example:
-
-```bash id="cmd017"
-man ls
-```
+| Command         | Explanation       |
+| --------------- | ----------------- |
+| `nano filename` | Opens Nano editor |
+| `vim filename`  | Opens Vim editor  |
 
 ---
+
+# Streams (Channels)
+
+| Stream   | Meaning         |
+| -------- | --------------- |
+| `STDIN`  | Standard Input  |
+| `STDOUT` | Standard Output |
+| `STDERR` | Standard Error  |
+
+---
+
+# Redirection Operators
+
+| Command | Explanation                 |
+| ------- | --------------------------- |
+| `>`     | Redirect output (overwrite) |
+| `>>`    | Redirect output (append)    |
+| `1>`    | Redirect standard output    |
+| `1>>`   | Append standard output      |
+| `2>`    | Redirect errors             |
+
+## Examples
+
+```bash
+ls 1> hello.txt
+```
+
+Redirects output to file.
+
+```bash
+du -h file.txt 2> error.txt
+```
+
+Redirects errors to file.
+
+```bash
+ls > /dev/null
+```
+
+Discards output.
+
+```bash
+ls 2> /dev/null
+```
+
+Discards error messages.
+
+---
+
+# Piping
+
+| Command                        | Explanation                         |                     |
+| ------------------------------ | ----------------------------------- | ------------------- |
+| `ls                            | wc -l`                              | Counts listed files |
+| `cat file.txt \| grep "hello"` | Searches text in file               |                     |
+| `tee file.txt`                 | Saves output and prints on terminal |                     |
+
+## Example
+
+```bash
+cat file.txt | grep "hello" | tee result.txt
+```
+
+Searches and stores matching lines.
+
+```bash
+ping google.com | tee ping.txt
+```
+
+Stores ping output while displaying it.
+
+---
+
+# Environment Variables
+
+| Command      | Explanation            |
+| ------------ | ---------------------- |
+| `echo $USER` | Displays current user  |
+| `echo $HOME` | Displays home path     |
+| `echo $PATH` | Displays PATH variable |
+
+---
+
+# Creating Environment Variables
+
+```bash
+export PORT_NO=5010
+echo $PORT_NO
+```
+
+Creates and displays variable.
+
+```bash
+export HELLO="This is env content"
+echo $HELLO
+```
+
+Creates string variable.
+
+```bash
+export HELLO="Hello, $USER"
+echo $HELLO
+```
+
+Uses another variable inside value.
+
+---
+
+# Reassigning Variables
+
+```bash
+HELLO="Hello world"
+echo $HELLO
+```
+
+Updates variable value.
+
+---
+
+# Globbing (Pattern Matching)
+
+| Command                         | Explanation                         |
+| ------------------------------- | ----------------------------------- |
+| `ls *.txt`                      | Lists all `.txt` files              |
+| `ls dir/*.txt`                  | Lists `.txt` files inside directory |
+| `echo *.txt`                    | Expands matching files              |
+| `echo '*.txt'`                  | Disables globbing                   |
+| `echo file*`                    | Matches files starting with `file`  |
+| `echo file.???`                 | Matches 3-character extensions      |
+| `echo ?????.txt`                | Matches 5-character file names      |
+| `echo img[0-9].[a-z][a-z][a-z]` | Matches patterns using ranges       |
+| `echo dir/*.txt`                | Matches `.txt` files in directory   |
+| `echo **/*.txt`                 | Recursive matching of `.txt` files  |
+
+```
